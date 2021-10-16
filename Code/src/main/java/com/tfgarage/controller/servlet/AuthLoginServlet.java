@@ -13,8 +13,8 @@ import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "CheckLoginServlet", urlPatterns = {"/check-login"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "AuthLoginServlet", urlPatterns = {"/authLogin"})
+public class AuthLoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -28,9 +28,9 @@ public class LoginServlet extends HttpServlet {
         AccountDAO dao = new AccountDAO();
         try {
             boolean result = dao.checkLogin(username,password);
-            String url = "invalid.html";
+            String url = "invalid";
             if (result) {
-                url = "search.jsp";
+                url = "searchPage";
                 HttpSession session = request.getSession();
                 session.setAttribute("USER", username);
             }

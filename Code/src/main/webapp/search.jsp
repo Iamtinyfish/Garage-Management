@@ -4,7 +4,10 @@
     <title>Title</title>
 </head>
 <body>
-    Welcome ${sessionScope.USER}
-    Search
+    <h1>Welcome, ${sessionScope.USER}</h1><br>
+    <form action="searchAction">
+        <input type="text" name="searchBox">
+        <input type="submit" name="Search" value="btnSearch">
+    </form>
 </body>
 </html>

@@ -7,10 +7,10 @@
 <body>
 <h1>Login Page</h1>
 <br/>
-<form action="ProcessServlet" method="post">
+<form action="loginAction" method="post">
     <input type="text" name="inUsername" placeholder="username"/>
     <input type="text" name="inPassword" placeholder="password"/>
-    <input type="submit" value="Login" name="btnLogin">
+    <input type="submit" value="loginAction" name="btnLogin">
 </form>
 </body>
 </html>
