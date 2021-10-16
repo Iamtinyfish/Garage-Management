@@ -1,4 +1,4 @@
-package com.tfgarage.garagemanagement.controller.utils;
+package com.tfgarage.controller.utils;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

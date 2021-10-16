@@ -1,6 +1,6 @@
-package com.tfgarage.garagemanagement.controller.servlet;
+package com.tfgarage.controller.servlet;
 
-import com.tfgarage.garagemanagement.controller.dao.AccountDAO;
+import com.tfgarage.controller.dao.AccountDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

@@ -1,4 +1,4 @@
-package com.tfgarage.garagemanagement.controller.servlet;
+package com.tfgarage.controller.servlet;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;

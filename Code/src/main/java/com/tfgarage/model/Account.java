@@ -1,4 +1,4 @@
-package com.tfgarage.garagemanagement.model;
+package com.tfgarage.model;
 
 public class Account {
     private static final String pepper = "";

@@ -1,4 +1,4 @@
-package com.tfgarage.garagemanagement.controller.utils;
+package com.tfgarage.controller.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
