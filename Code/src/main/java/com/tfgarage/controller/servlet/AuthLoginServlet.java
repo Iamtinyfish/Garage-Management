@@ -13,7 +13,7 @@ import javax.naming.NamingException;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
+@WebServlet(name = "CheckLoginServlet", urlPatterns = {"/check-login"})
 public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
