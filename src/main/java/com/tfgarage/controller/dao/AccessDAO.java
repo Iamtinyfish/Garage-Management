@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dao;
+import java.sql.CallableStatement;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import model.Accessory
+/**
+ *
+ * @author Nello
+ */
+public class AccessDAO extends DAO{
+    public AccessDAO(){
+        super();
+    }
+    public ArrayList<Accessory> getAll(){
+        ArrayList<Accessory> result = new ArrayList<Accessory>();
+        return result;
+    }
+    public ArrayList<Accessory> getAcces(int id){
+        ArrayList<Accessory> result = new ArrayList<Accessory>();
+        return result;
+    }
+    public ArrayList<Accessory> searchAccess(String key){
+        ArrayList<Accessory> result = new ArrayList<Accessory>();
+        return result;
+    }
+}
