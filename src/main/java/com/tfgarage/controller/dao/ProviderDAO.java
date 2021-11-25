@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
-import java.sql.CallableStatement;
+package com.tfgarage.controller.dao;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-
-import model.Provider
+import com.tfgarage.model.Provider;
 /**
  *
  * @author Nello

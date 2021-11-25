@@ -1,16 +1,17 @@
 package com.tfgarage.model;
 
 public class CustomerStat extends Customer {
-    private float totalRevenue;
 
-    public CustomerStat() {
-    }
+	private float totalRevenue;
 
-    public float getTotalRevenue() {
-        return totalRevenue;
-    }
+	public CustomerStat() {
+	}
 
-    public void setTotalRevenue(float totalRevenue) {
-        this.totalRevenue = totalRevenue;
-    }
+	public float getTotalRevenue() {
+		return totalRevenue;
+	}
+
+	public void setTotalRevenue(float totalRevenue) {
+		this.totalRevenue = totalRevenue;
+	}
 }

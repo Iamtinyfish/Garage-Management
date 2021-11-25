@@ -1,22 +1,22 @@
 package com.tfgarage.model;
 
 public class AccessoryStat extends Accessory {
-    private float totalRevenue;
 
-    public AccessoryStat() {
-    }
+	private float totalRevenue;
 
-    public AccessoryStat(int id, String name, float receivedPrice, float price,
-                         String description, int stock, float totalRevenue) {
-        super(id, name, receivedPrice, price, description, stock);
-        this.totalRevenue = totalRevenue;
-    }
+	public AccessoryStat() {
+	}
 
-    public float getTotalRevenue() {
-        return totalRevenue;
-    }
+	public AccessoryStat(int id, String name, int stock, float receivedPrice, String description, float price, String unit, float totalRevenue) {
+		super(id, name, stock, receivedPrice, description, price, unit);
+		this.totalRevenue = totalRevenue;
+	}
 
-    public void setTotalRevenue(float totalRevenue) {
-        this.totalRevenue = totalRevenue;
-    }
+	public float getTotalRevenue() {
+		return totalRevenue;
+	}
+
+	public void setTotalRevenue(float totalRevenue) {
+		this.totalRevenue = totalRevenue;
+	}
 }

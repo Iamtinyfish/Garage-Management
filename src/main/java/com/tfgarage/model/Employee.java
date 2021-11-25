@@ -1,113 +1,100 @@
 package com.tfgarage.model;
 
+import java.util.Date;
+
 public class Employee {
-    private int id;
-    private String name;
-    private int age;
-    private String gender;
-    private String address;
-    private String phoneNum;
-    private String email;
-    private String cardID;
-    private Account account;
 
-    public Employee() {
-    }
+	private int id;
+	private String name;
+	private Date birthday;
+	private String gender;
+	private String address;
+	private String phoneNum;
+	private String email;
+	private String idCard;
+	private String position;
+	private String note;
 
-    public Employee(int id, String name, int age, String gender, String address,
-                    String phoneNum, String email, String cardID, Account account) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.address = address;
-        this.phoneNum = phoneNum;
-        this.email = email;
-        this.cardID = cardID;
-        this.account = account;
-    }
+	public Employee() {
+	}
 
-    public Employee(int id, String name, int age, String gender, String address,
-                    String phoneNum, String email, String cardID) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.address = address;
-        this.phoneNum = phoneNum;
-        this.email = email;
-        this.cardID = cardID;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public Date getBirthday() {
+		return birthday;
+	}
 
-    public int getAge() {
-        return age;
-    }
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public String getGender() {
+		return gender;
+	}
 
-    public String getGender() {
-        return gender;
-    }
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public String getPhoneNum() {
+		return phoneNum;
+	}
 
-    public String getPhoneNum() {
-        return phoneNum;
-    }
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getIdCard() {
+		return idCard;
+	}
 
-    public String getCardID() {
-        return cardID;
-    }
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
+	}
 
-    public void setCardID(String cardID) {
-        this.cardID = cardID;
-    }
+	public String getPosition() {
+		return position;
+	}
 
-    public Account getAccount() {
-        return account;
-    }
+	public void setPosition(String position) {
+		this.position = position;
+	}
 
-    public void setAccount(Account account) {
-        this.account = account;
-    }
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
 }

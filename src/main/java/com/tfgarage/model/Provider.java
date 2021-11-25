@@ -1,71 +1,71 @@
 package com.tfgarage.model;
 
 public class Provider {
-    private int id;
-    private String name;
-    private String address;
-    private String phoneNum;
-    private String email;
-    private String note;
 
-    public Provider() {
-    }
+	private int id;
+	private String name;
+	private String address;
+	private String phoneNum;
+	private String email;
+	private String note;
 
-    public Provider(int id, String name, String address,
-                    String phoneNum, String email, String note) {
-        this.id = id;
-        this.name = name;
-        this.address = address;
-        this.phoneNum = phoneNum;
-        this.email = email;
-        this.note = note;
-    }
+	public Provider() {
+	}
 
-    public int getId() {
-        return id;
-    }
+	public Provider(int id, String name, String address, String phoneNum, String email, String note) {
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.phoneNum = phoneNum;
+		this.email = email;
+		this.note = note;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public String getPhoneNum() {
-        return phoneNum;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
+	public String getPhoneNum() {
+		return phoneNum;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setNote(String note) {
-        this.note = note;
-    }
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
 }

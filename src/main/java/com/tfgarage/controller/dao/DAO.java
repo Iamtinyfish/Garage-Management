@@ -1,10 +1,10 @@
-package dao;
+package com.tfgarage.controller.dao;
  
 import java.sql.Connection;
 import java.sql.DriverManager;
  
 public class DAO {
-public static Connection con;
+    public static Connection con;
      
     public DAO(){
         if(con == null){

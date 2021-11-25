@@ -1,40 +1,51 @@
 package com.tfgarage.model;
 
 public class ReceivedAccessory {
-    private Accessory accessory;
-    private int amount;
-    private int receivedPrice;
 
-    public ReceivedAccessory() {
-    }
+	private int amount;
+	private Accessory accessory;
+	private float receivedPrice;
+	private String note;
 
-    public ReceivedAccessory(Accessory accessory, int amount, int receivedPrice) {
-        this.accessory = accessory;
-        this.amount = amount;
-        this.receivedPrice = receivedPrice;
-    }
+	public ReceivedAccessory() {
+	}
 
-    public Accessory getAccessory() {
-        return accessory;
-    }
+	public ReceivedAccessory(int amount, Accessory accessory, float receivedPrice, String note) {
+		this.amount = amount;
+		this.accessory = accessory;
+		this.receivedPrice = receivedPrice;
+		this.note = note;
+	}
 
-    public void setAccessory(Accessory accessory) {
-        this.accessory = accessory;
-    }
+	public int getAmount() {
+		return amount;
+	}
 
-    public int getAmount() {
-        return amount;
-    }
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
+	public Accessory getAccessory() {
+		return accessory;
+	}
 
-    public int getReceivedPrice() {
-        return receivedPrice;
-    }
+	public void setAccessory(Accessory accessory) {
+		this.accessory = accessory;
+	}
 
-    public void setReceivedPrice(int receivedPrice) {
-        this.receivedPrice = receivedPrice;
-    }
+	public float getReceivedPrice() {
+		return receivedPrice;
+	}
+
+	public void setReceivedPrice(float receivedPrice) {
+		this.receivedPrice = receivedPrice;
+	}
+
+	public String getNote() {
+		return note;
+	}
+
+	public void setNote(String note) {
+		this.note = note;
+	}
 }

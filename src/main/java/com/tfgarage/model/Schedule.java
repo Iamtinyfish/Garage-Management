@@ -3,85 +3,89 @@ package com.tfgarage.model;
 import java.util.Date;
 
 public class Schedule {
-    private int id;
-    private String customerName;
-    private String phoneNum;
-    private String email;
-    private Date scheduleDay;
-    private String note;
-    private String status;
-    private Employee employee;
-    private Customer customer;
 
-    public int getId() {
-        return id;
-    }
+	private int id;
+	private String customerName;
+	private String phoneNum;
+	private String email;
+	private Date scheduleDay;
+	private String note;
+	private String status;
+	private Employee employee;
+	private Customer customer;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public Schedule() {
+	}
 
-    public String getCustomerName() {
-        return customerName;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getPhoneNum() {
-        return phoneNum;
-    }
+	public String getCustomerName() {
+		return customerName;
+	}
 
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getPhoneNum() {
+		return phoneNum;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 
-    public Date getScheduleDay() {
-        return scheduleDay;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setScheduleDay(Date scheduleDay) {
-        this.scheduleDay = scheduleDay;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getNote() {
-        return note;
-    }
+	public Date getScheduleDay() {
+		return scheduleDay;
+	}
 
-    public void setNote(String note) {
-        this.note = note;
-    }
+	public void setScheduleDay(Date scheduleDay) {
+		this.scheduleDay = scheduleDay;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	public String getNote() {
+		return note;
+	}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	public void setNote(String note) {
+		this.note = note;
+	}
 
-    public Employee getEmployee() {
-        return employee;
-    }
+	public String getStatus() {
+		return status;
+	}
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
-    public Customer getCustomer() {
-        return customer;
-    }
+	public Employee getEmployee() {
+		return employee;
+	}
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 }

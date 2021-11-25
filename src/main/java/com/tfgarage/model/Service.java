@@ -1,50 +1,51 @@
 package com.tfgarage.model;
 
 public class Service {
-    private int id;
-    private String name;
-    private double price;
-    private String description;
 
-    public Service() {
-    }
+	private int id;
+	private String name;
+	private float price;
+	private String description;
 
-    public Service(int id, String name, double price, String description) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-    }
+	public Service() {
+	}
 
-    public int getId() {
-        return id;
-    }
+	public Service(int id, String name, float price, String description) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.description = description;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public double getPrice() {
-        return price;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+	public float getPrice() {
+		return price;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public void setPrice(float price) {
+		this.price = price;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 }
