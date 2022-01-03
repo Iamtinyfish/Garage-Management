@@ -24,7 +24,7 @@ public class EmployeeDAO  extends DAO{
         String sql = "SELECT * FROM tblemployee WHERE id = ?";
         try{
            PreparedStatement ps = con.prepareStatement(sql);
-           ps.setString(1,"" + id + "");
+           ps.setString(1,"" + employeeID + "");
            ResultSet rs= ps.executeQuery();
            while(rs.next()){
                Employee employee= new Employee();
