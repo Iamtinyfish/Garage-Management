@@ -1,6 +1,7 @@
 package com.tfgarage.controller.dao;
 
 import com.tfgarage.controller.utils.MySQLConnUtils;
+import com.tfgarage.model.Account;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -12,6 +13,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Base64;
 
 public class AccountDAO {
@@ -44,6 +46,38 @@ public class AccountDAO {
         assert hashPassword != null;
         assert salt != null;
         return hashPassword.equals(hash(password, salt));
+    }
+
+    public ArrayList<Account> getAll() {
+        //TODO getAll account method
+        ArrayList<Account> accountList = new ArrayList<Account>();
+        return accountList;
+    }
+
+    public Account get(int accountID) {
+        //TODO get 1 account method
+        return new Account();
+    }
+
+    public ArrayList<Account> search(String keyword) {
+        //TODO search account method
+        ArrayList<Account> accountList = new ArrayList<Account>();
+        return accountList;
+    }
+
+    public boolean add(Account account) {
+        //TODO add 1 account method
+        return true;
+    }
+
+    public boolean update(Account account) {
+        //TODO update 1 account method
+        return true;
+    }
+
+    public boolean delete(int accountID) {
+        //TODO delete 1 account method
+        return true;
     }
 
     private String hash(String password, String salt) {

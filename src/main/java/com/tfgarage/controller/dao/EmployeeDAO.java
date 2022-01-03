@@ -5,11 +5,10 @@
  */
 package com.tfgarage.controller.dao;
 
-import java.sql.CallableStatement;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-
 import com.tfgarage.model.Employee;
 /**
  *
@@ -19,7 +18,8 @@ public class EmployeeDAO  extends DAO{
     public EmployeeDAO(){
         super();
     }
-    public ArrayList<Employee> getEmployee(int id){
+
+    public ArrayList<Employee> get(int employeeID){
         ArrayList<Employee> result= new ArrayList<Employee>();
         String sql = "SELECT * FROM tblemployee WHERE id = ?";
         try{
@@ -43,6 +43,33 @@ public class EmployeeDAO  extends DAO{
             e.printStackTrace();
         }
         return result;
+    }
+
+    public ArrayList<Employee> getAll() {
+        //TODO getAll employee method
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
+        return employeeList;
+    }
+
+    public ArrayList<Employee> search(String keyword) {
+        //TODO search employee method
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
+        return employeeList;
+    }
+
+    public boolean add(Employee employee) {
+        //TODO add 1 employee method
+        return true;
+    }
+
+    public boolean update(Employee employee) {
+        //TODO update 1 employee method
+        return true;
+    }
+
+    public boolean delete(int employeeID) {
+        //TODO delete 1 employee method
+        return true;
     }
     
 }

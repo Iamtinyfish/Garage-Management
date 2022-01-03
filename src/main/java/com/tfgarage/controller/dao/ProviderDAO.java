@@ -9,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
+
 import com.tfgarage.model.Provider;
 /**
  *
@@ -18,8 +20,8 @@ public class ProviderDAO extends DAO{
     public ProviderDAO(){
         super();
     }
-    public ArrayList<Provider> getAllProvider(){
-        ArrayList<Provider> result = new ArrayList<Provider>();
+    public List<Provider> getAll(){
+        List<Provider> result = new ArrayList<Provider>();
         String sql = "SELECT * FROM tblprovider";
         try{
             PreparedStatement ps= con.prepareStatement(sql);
@@ -38,13 +40,13 @@ public class ProviderDAO extends DAO{
         }
         return result;
     }
-    public ArrayList<Provider> getProvider(int id){
+    public ArrayList<Provider> get(int id){
         ArrayList<Provider> result = new ArrayList<Provider>();
         String sql = "SELECT * FROM tblprovider WHERE id=?";
         try{
-            PreparedStatement ps= con.prepareStatement(sql);
-            ps.setString(1, ""+id+"");
-            ResultSet rs =ps.executeQuery();
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, "" + id+ "" );
+            ResultSet rs = ps.executeQuery();
             
             while(rs.next()){
                 Provider provider= new Provider();
@@ -59,9 +61,9 @@ public class ProviderDAO extends DAO{
         }
         return result;
     }
-    public boolean addProvider(Provider provider){
-        boolean result=true;
-        String sql="INSERT INTO tblprovider(name, address, phonenum) VALUES(?,?,?)";
+    public boolean add(Provider provider){
+        boolean result = true;
+        String sql = "INSERT INTO tblprovider(name, address, phonenum) VALUES(?,?,?)";
         try{
             PreparedStatement ps = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setString(1,provider.getName());
@@ -75,20 +77,20 @@ public class ProviderDAO extends DAO{
             }
         }catch(Exception e){
             e.printStackTrace();
-            result=false;
+            result = false;
         }
         return result;
     }
-    public boolean deleteProvider(Provider provider){
-        boolean result =true;
-        return result;
-    }
-    public boolean editProvider(Provider provider){
+    public boolean delete(int providerID){
         boolean result = true;
         return result;
     }
-    public ArrayList<Provider> searchProvider(String key){
-        ArrayList<Provider> result = new ArrayList<Provider>();
+    public boolean update(Provider provider){
+        boolean result = true;
+        return result;
+    }
+    public List<Provider> search(String keyword){
+        List<Provider> result = new ArrayList<Provider>();
         return result;
     }
 }

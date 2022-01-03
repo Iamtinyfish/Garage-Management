@@ -16,16 +16,36 @@ public class AccessoryDAO extends DAO {
     public AccessoryDAO(){
         super();
     }
-    public ArrayList<Accessory> getAll(){
-        ArrayList<Accessory> result = new ArrayList<Accessory>();
-        return result;
+
+    public ArrayList<Accessory> getAll() {
+        //TODO getAll accessory method
+        ArrayList<Accessory> accessoryList = new ArrayList<Accessory>();
+        return accessoryList;
     }
-    public ArrayList<Accessory> getAcces(int id){
-        ArrayList<Accessory> result = new ArrayList<Accessory>();
-        return result;
+
+    public Accessory get(int accessoryID) {
+        //TODO get 1 accessory method
+        return new Accessory();
     }
-    public ArrayList<Accessory> searchAccess(String key){
-        ArrayList<Accessory> result = new ArrayList<Accessory>();
-        return result;
+
+    public ArrayList<Accessory> search(String keyword) {
+        //TODO search accessory method
+        ArrayList<Accessory> accessoryList = new ArrayList<Accessory>();
+        return accessoryList;
+    }
+
+    public boolean add(Accessory accessory) {
+        //TODO add 1 accessory method
+        return true;
+    }
+
+    public boolean update(Accessory accessory) {
+        //TODO update 1 accessory method
+        return true;
+    }
+
+    public boolean delete(int accessoryID) {
+        //TODO delete 1 accessory method
+        return true;
     }
 }

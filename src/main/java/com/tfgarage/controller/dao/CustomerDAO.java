@@ -5,10 +5,6 @@
  */
 package com.tfgarage.controller.dao;
 
-import java.sql.CallableStatement;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.tfgarage.model.Customer;
@@ -20,28 +16,36 @@ public class CustomerDAO extends DAO{
     public CustomerDAO(){
         super();
     }
-    public ArrayList<Customer> getAllCustomer(){
-        ArrayList<Customer> result = new ArrayList<Customer>();
-        return result;
+
+    public ArrayList<Customer> getAll() {
+        //TODO getAll customer method
+        ArrayList<Customer> customerList = new ArrayList<Customer>();
+        return customerList;
     }
-    public ArrayList<Customer> getCustomer(int id){
-        ArrayList<Customer> result = new ArrayList<Customer>();
-        return result;
+
+    public Customer get(int customerID) {
+        //TODO get 1 customer method
+        return new Customer();
     }
-    public boolean addCustomer(Customer customer){
-        boolean result= true;
-        return result;
+
+    public ArrayList<Customer> search(String keyword) {
+        //TODO search customer method
+        ArrayList<Customer> customerList = new ArrayList<Customer>();
+        return customerList;
     }
-    public boolean deleteCustomer(Customer customer){
-        boolean result= true;
-        return result;
+
+    public boolean add(Customer customer) {
+        //TODO add 1 customer method
+        return true;
     }
-    public boolean editCustomer(Customer customer){
-        boolean result= true;
-        return result;
+
+    public boolean update(Customer customer) {
+        //TODO update 1 customer method
+        return true;
     }
-    public ArrayList<Customer> searchCustomer(String key){
-        ArrayList<Customer> result = new ArrayList<Customer>();
-        return result;
+
+    public boolean delete(int customerID) {
+        //TODO delete 1 customer method
+        return true;
     }
 }

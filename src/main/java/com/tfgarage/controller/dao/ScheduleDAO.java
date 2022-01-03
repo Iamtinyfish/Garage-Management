@@ -5,42 +5,55 @@
  */
 package com.tfgarage.controller.dao;
 
-import java.sql.CallableStatement;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
+
 import com.tfgarage.model.Schedule;
+
 /**
- *
  * @author Nello
  */
-public class ScheduleDAO extends DAO{
-    public ScheduleDAO(){
+public class ScheduleDAO extends DAO {
+    public ScheduleDAO() {
         super();
     }
-    public ArrayList<Schedule> getAllSchedule(){
+
+    public ArrayList<Schedule> getAll() {
         ArrayList<Schedule> result = new ArrayList<Schedule>();
         return result;
     }
-    public ArrayList<Schedule> getSchedule(int id){
+
+    public ArrayList<Schedule> get(int scheduleID) {
         ArrayList<Schedule> result = new ArrayList<Schedule>();
         return result;
     }
-    public boolean addSchedule(Schedule schedule){
-        boolean result= true;
+
+    public boolean add(Schedule schedule) {
+        boolean result = true;
         return result;
     }
-    public boolean deleteSchedule(Schedule schedule){
-        boolean result= true;
+
+    public boolean delete(int scheduleID) {
+        boolean result = true;
         return result;
     }
-    public boolean editSchedule(Schedule schedule){
-        boolean result= true;
+
+    public boolean update(Schedule schedule) {
+        boolean result = true;
         return result;
     }
-    public ArrayList<Schedule> searchSchedule(String key){
+
+    public ArrayList<Schedule> search(String keyword) {
         ArrayList<Schedule> result = new ArrayList<Schedule>();
+        return result;
+    }
+
+    public ArrayList<Schedule> getNewSchedule() {
+        ArrayList<Schedule> result = new ArrayList<Schedule>();
+        return result;
+    }
+
+    public boolean reviewSchedule(int scheduleID, boolean isAccept) {
+        boolean result = true;
         return result;
     }
 }

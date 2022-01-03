@@ -4,12 +4,7 @@
  * and open the template in the editor.
  */
 package com.tfgarage.controller.dao;
-import java.sql.CallableStatement;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
-
 import com.tfgarage.model.Service;
 /**
  *
@@ -19,16 +14,36 @@ public class ServiceDAO extends DAO{
     public ServiceDAO(){
         super();
     }
-    public ArrayList<Service> getAll(){
-        ArrayList<Service> result = new ArrayList<Service>();
-        return result;
+
+    public ArrayList<Service> getAll() {
+        //TODO getAll service method
+        ArrayList<Service> serviceList = new ArrayList<Service>();
+        return serviceList;
     }
-    public ArrayList<Service> getAcces(int id){
-        ArrayList<Service> result = new ArrayList<Service>();
-        return result;
+
+    public Service get(int serviceID) {
+        //TODO get 1 service method
+        return new Service();
     }
-    public ArrayList<Service> searchAccess(String key){
-        ArrayList<Service> result = new ArrayList<Service>();
-        return result;
+
+    public ArrayList<Service> search(String keyword) {
+        //TODO search service method
+        ArrayList<Service> serviceList = new ArrayList<Service>();
+        return serviceList;
+    }
+
+    public boolean add(Service service) {
+        //TODO add 1 service method
+        return true;
+    }
+
+    public boolean update(Service service) {
+        //TODO update 1 service method
+        return true;
+    }
+
+    public boolean delete(int serviceID) {
+        //TODO delete 1 service method
+        return true;
     }
 }
