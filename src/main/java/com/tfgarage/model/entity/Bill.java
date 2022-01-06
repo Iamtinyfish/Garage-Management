@@ -1,5 +1,6 @@
 package com.tfgarage.model.entity;
 
+import com.tfgarage.model.entity.utils.BillStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.Getter;
@@ -18,17 +19,18 @@ public class Bill {
 	@Column(name = "ID", nullable = false ,unique = true)
 	private int id;
 
-	@OneToMany(mappedBy = "bill")
+	@OneToMany(mappedBy = "bill", fetch = FetchType.EAGER)
 	private List<UsedService> usedServices;
 
-	@OneToMany(mappedBy = "bill")
+	@OneToMany(mappedBy = "bill", fetch = FetchType.EAGER)
 	private List<UsedAccessory> usedAccessories;
 
 	@Column(name = "totalPrice", nullable = false)
 	private float totalPrice;
 
 	@Column(name = "status", nullable = false, length = 25)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	private BillStatus status;
 
 	@Column(name = "startDay", nullable = false)
 	@PastOrPresent
@@ -46,7 +48,7 @@ public class Bill {
 	@JoinColumn(name = "EmployeeID")
 	private Employee employee;
 
-	@ManyToMany(targetEntity = Employee.class)
+	@ManyToMany(targetEntity = Employee.class, fetch = FetchType.EAGER)
 	@JoinTable(
 		name = "technicianassignment",
 		joinColumns = @JoinColumn(name = "BillID"),

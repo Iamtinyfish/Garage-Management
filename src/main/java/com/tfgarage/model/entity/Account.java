@@ -1,5 +1,6 @@
 package com.tfgarage.model.entity;
 
+import com.tfgarage.model.entity.utils.AccountStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,9 +28,10 @@ public class Account {
 	private String position;
 
 	@Column(name = "status", length = 25, nullable = false)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	private AccountStatus status;
 
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY)
 //	@JoinColumn(name = "EmployeeID")
 	private Employee employee;
 }

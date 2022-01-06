@@ -1,5 +1,6 @@
 package com.tfgarage.model.entity;
 
+import com.tfgarage.model.entity.utils.CarStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,7 +25,8 @@ public class Car {
 	private String type;
 
 	@Column(name = "status", nullable = false, length = 25)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	private CarStatus status;
 
 	@Column(name = "note")
 	private String note;

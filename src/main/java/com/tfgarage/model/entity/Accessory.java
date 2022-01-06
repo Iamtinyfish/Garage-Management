@@ -1,5 +1,6 @@
 package com.tfgarage.model.entity;
 
+import com.tfgarage.model.entity.utils.AccessoryStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,7 +36,8 @@ public class Accessory {
 	private float price;
 
 	@Column(name = "status", length = 25)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	private AccessoryStatus status;
 
 	@OneToMany(mappedBy = "accessory")
 	private List<UsedAccessory> usedAccessories;

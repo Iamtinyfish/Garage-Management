@@ -19,7 +19,7 @@ public class AccessoryReceiptNote {
 	@Column(name = "ID", nullable = false ,unique = true)
 	private int id;
 
-	@OneToMany(mappedBy = "accessoryReceiptNote")
+	@OneToMany(mappedBy = "accessoryReceiptNote", fetch = FetchType.EAGER)
 	private List<ReceivedAccessory> receivedAccessories;
 
 	@Column(name = "totalCost", nullable = false)

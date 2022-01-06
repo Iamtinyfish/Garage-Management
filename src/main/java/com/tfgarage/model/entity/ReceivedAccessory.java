@@ -12,7 +12,7 @@ public class ReceivedAccessory {
 	@EmbeddedId
 	ReceivedAccessoryKey id;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("accessoryReceiptNoteID")
 	@JoinColumn(name = "AccessoryReceiptNoteID")
 	private AccessoryReceiptNote accessoryReceiptNote;

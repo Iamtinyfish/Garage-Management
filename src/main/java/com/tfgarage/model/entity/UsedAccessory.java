@@ -12,7 +12,7 @@ public class UsedAccessory {
 	@EmbeddedId
 	UsedAccessoryKey id;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("billID")
 	@JoinColumn(name = "BillID")
 	private Bill bill;

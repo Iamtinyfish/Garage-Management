@@ -12,7 +12,7 @@ public class UsedService{
 	@EmbeddedId
 	private UsedServiceKey id;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@MapsId("billID")
 	@JoinColumn(name = "BillID")
 	private Bill bill;

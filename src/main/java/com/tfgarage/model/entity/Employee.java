@@ -1,5 +1,7 @@
 package com.tfgarage.model.entity;
 
+import com.tfgarage.model.entity.utils.CarStatus;
+import com.tfgarage.model.entity.utils.EmployeeStatus;
 import com.tfgarage.model.entity.utils.Gender;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -47,9 +49,13 @@ public class Employee {
 	@Column(name = "idCard", nullable = false, unique = true, length = 12)
 	private String idCard;
 
+	@Column(name = "status", nullable = false, length = 25)
+	@Enumerated(EnumType.STRING)
+	private EmployeeStatus status;
+
 	@Column(name = "note")
 	private String note;
 
-	@OneToOne(mappedBy = "employee")
+	@OneToOne(mappedBy = "employee", fetch = FetchType.LAZY)
 	private Account account;
 }
