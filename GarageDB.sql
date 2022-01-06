@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `garagedb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `garagedb`;
 -- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
 --
 -- Host: localhost    Database: garagedb
@@ -15,386 +17,424 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE  IF NOT EXISTS `garagedb` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `garagedb`;
-
 --
--- Table structure for table `tblaccessory`
+-- Table structure for table `accessory`
 --
 
-DROP TABLE IF EXISTS `tblaccessory`;
+DROP TABLE IF EXISTS `accessory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblaccessory` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `stock` int NOT NULL,
-  `receivedPrice` decimal(17,2) NOT NULL,
-  `price` decimal(17,2) NOT NULL,
-  `unit` varchar(20) NOT NULL,
-  `description` varchar(255) DEFAULT NULL,
+CREATE TABLE `accessory` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `stock` INT NOT NULL,
+  `receivedCost` DECIMAL(17,2),
+  `price` DECIMAL(17,2),
+  `unit` VARCHAR(25),
+  `status` VARCHAR(25) NOT NULL,
+  `description` VARCHAR(255),
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblaccessory`
+-- Dumping data for table `accessory`
 --
 
-LOCK TABLES `tblaccessory` WRITE;
-/*!40000 ALTER TABLE `tblaccessory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblaccessory` ENABLE KEYS */;
+LOCK TABLES `accessory` WRITE;
+/*!40000 ALTER TABLE `accessory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `accessory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblaccessoryreceiptnote`
+-- Table structure for table `accessoryreceiptnote`
 --
 
-DROP TABLE IF EXISTS `tblaccessoryreceiptnote`;
+DROP TABLE IF EXISTS `accessoryreceiptnote`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblaccessoryreceiptnote` (
-  `ID` int NOT NULL,
-  `totalCost` decimal(17,2) NOT NULL,
+CREATE TABLE `accessoryreceiptnote` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `totalCost` DECIMAL(17,2) NOT NULL,
   `receivedDay` date NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
-  `tblEmployeeID` int NOT NULL,
-  `tblProviderID` int NOT NULL,
-  PRIMARY KEY (`ID`)
+  `note` VARCHAR(255),
+  `EmployeeID` INT NOT NULL,
+  `ProviderID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FKAccesso441502` (`EmployeeID`),
+  KEY `FKAccesso408635` (`ProviderID`),
+  CONSTRAINT `FKAccesso408635` FOREIGN KEY (`ProviderID`) REFERENCES `provider` (`ID`),
+  CONSTRAINT `FKAccesso441502` FOREIGN KEY (`EmployeeID`) REFERENCES `employee` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblaccessoryreceiptnote`
+-- Dumping data for table `accessoryreceiptnote`
 --
 
-LOCK TABLES `tblaccessoryreceiptnote` WRITE;
-/*!40000 ALTER TABLE `tblaccessoryreceiptnote` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblaccessoryreceiptnote` ENABLE KEYS */;
+LOCK TABLES `accessoryreceiptnote` WRITE;
+/*!40000 ALTER TABLE `accessoryreceiptnote` DISABLE KEYS */;
+/*!40000 ALTER TABLE `accessoryreceiptnote` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblaccount`
+-- Table structure for table `account`
 --
 
-DROP TABLE IF EXISTS `tblaccount`;
+DROP TABLE IF EXISTS `account`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblaccount` (
-  `ID` int NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  `salt` varchar(8) NOT NULL,
-  `position` varchar(20) NOT NULL,
-  `tblEmployeeID` int NOT NULL,
-  PRIMARY KEY (`ID`)
+CREATE TABLE `account` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(255) NOT NULL,
+  `password` CHAR(32) NOT NULL,
+  `salt` CHAR(8) NOT NULL,
+  `position` VARCHAR(25) NOT NULL,
+  `status` VARCHAR(25) NOT NULL,
+  `EmployeeID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FKAccount698846` (`EmployeeID`),
+  CONSTRAINT `FKAccount698846` FOREIGN KEY (`EmployeeID`) REFERENCES `employee` (`ID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblaccount`
+-- Dumping data for table `account`
 --
 
-LOCK TABLES `tblaccount` WRITE;
-/*!40000 ALTER TABLE `tblaccount` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblaccount` ENABLE KEYS */;
+LOCK TABLES `account` WRITE;
+/*!40000 ALTER TABLE `account` DISABLE KEYS */;
+/*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblbill`
+-- Table structure for table `bill`
 --
 
-DROP TABLE IF EXISTS `tblbill`;
+DROP TABLE IF EXISTS `bill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblbill` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `totalPrice` decimal(17,2) NOT NULL,
-  `status` varchar(20) NOT NULL,
+CREATE TABLE `bill` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `totalPrice` DECIMAL(17,2) NOT NULL,
+  `status` VARCHAR(25) NOT NULL,
   `startDay` date NOT NULL,
   `latestEditDay` date NOT NULL,
-  `paymentDay` date DEFAULT NULL,
-  `note` varchar(255) DEFAULT NULL,
-  `tblCarID` int NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tblbill`
---
-
-LOCK TABLES `tblbill` WRITE;
-/*!40000 ALTER TABLE `tblbill` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblbill` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tblcar`
---
-
-DROP TABLE IF EXISTS `tblcar`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblcar` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `licensePlate` varchar(20) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `tblCustomerID` int NOT NULL,
+  `paymentDay` date,
+  `note` VARCHAR(255),
+  `CarID` INT NOT NULL,
+  `EmployeeID` INT NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `FKtblCar882719` (`tblCustomerID`),
-  CONSTRAINT `FKtblCar882719` FOREIGN KEY (`tblCustomerID`) REFERENCES `tblcustomer` (`ID`)
+  KEY `FKBill897505` (`CarID`),
+  KEY `FKBill666739` (`EmployeeID`),
+  CONSTRAINT `FKBill666739` FOREIGN KEY (`EmployeeID`) REFERENCES `employee` (`ID`),
+  CONSTRAINT `FKBill897505` FOREIGN KEY (`CarID`) REFERENCES `car` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblcar`
+-- Dumping data for table `bill`
 --
 
-LOCK TABLES `tblcar` WRITE;
-/*!40000 ALTER TABLE `tblcar` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblcar` ENABLE KEYS */;
+LOCK TABLES `bill` WRITE;
+/*!40000 ALTER TABLE `bill` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bill` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblcustomer`
+-- Table structure for table `car`
 --
 
-DROP TABLE IF EXISTS `tblcustomer`;
+DROP TABLE IF EXISTS `car`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblcustomer` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
+CREATE TABLE `car` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `licensePlate` VARCHAR(25) NOT NULL,
+  `type` VARCHAR(255),
+  `status` VARCHAR(25) NOT NULL,
+  `note` VARCHAR(255),
+  `CustomerID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FKCar882719` (`CustomerID`),
+  CONSTRAINT `FKCar882719` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `car`
+--
+
+LOCK TABLES `car` WRITE;
+/*!40000 ALTER TABLE `car` DISABLE KEYS */;
+/*!40000 ALTER TABLE `car` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `customer` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
   `birthday` date NOT NULL,
-  `gender` varchar(20) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `idCard` varchar(20) NOT NULL,
-  `level` int NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
+  `gender` VARCHAR(25) NOT NULL,
+  `address` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(25) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `idCard` VARCHAR(25) NOT NULL,
+  `level` INT NOT NULL,
+  `note` VARCHAR(255),
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblcustomer`
+-- Dumping data for table `customer`
 --
 
-LOCK TABLES `tblcustomer` WRITE;
-/*!40000 ALTER TABLE `tblcustomer` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblcustomer` ENABLE KEYS */;
+LOCK TABLES `customer` WRITE;
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblemployee`
+-- Table structure for table `employee`
 --
 
-DROP TABLE IF EXISTS `tblemployee`;
+DROP TABLE IF EXISTS `employee`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblemployee` (
-  `ID` int NOT NULL,
-  `name` varchar(255) NOT NULL,
+CREATE TABLE `employee` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
   `birthday` date NOT NULL,
-  `gender` binary(1) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `idCard` varchar(20) NOT NULL,
-  `position` varchar(20) NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
+  `gender` VARCHAR(25) NOT NULL,
+  `address` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(25) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `idCard` VARCHAR(25) NOT NULL,
+  `position` VARCHAR(25) NOT NULL,
+  `status` VARCHAR(25) NOT NULL,
+  `note` VARCHAR(255),
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblemployee`
+-- Dumping data for table `employee`
 --
 
-LOCK TABLES `tblemployee` WRITE;
-/*!40000 ALTER TABLE `tblemployee` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblemployee` ENABLE KEYS */;
+LOCK TABLES `employee` WRITE;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblprovider`
+-- Table structure for table `provider`
 --
 
-DROP TABLE IF EXISTS `tblprovider`;
+DROP TABLE IF EXISTS `provider`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblprovider` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
+CREATE TABLE `provider` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `address` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(25) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `note` VARCHAR(255),
+  `status` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblprovider`
+-- Dumping data for table `provider`
 --
 
-LOCK TABLES `tblprovider` WRITE;
-/*!40000 ALTER TABLE `tblprovider` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblprovider` ENABLE KEYS */;
+LOCK TABLES `provider` WRITE;
+/*!40000 ALTER TABLE `provider` DISABLE KEYS */;
+/*!40000 ALTER TABLE `provider` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblreceivedaccessory`
+-- Table structure for table `receivedaccessory`
 --
 
-DROP TABLE IF EXISTS `tblreceivedaccessory`;
+DROP TABLE IF EXISTS `receivedaccessory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblreceivedaccessory` (
-  `amount` int NOT NULL,
-  `receivedPrice` decimal(17,2) NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
-  `tblAccessoryID` int NOT NULL,
-  `tblAccessoryReceiptNoteID` int NOT NULL
+CREATE TABLE `receivedaccessory` (
+  `amount` INT NOT NULL,
+  `receivedCost` DECIMAL(17,2) NOT NULL,
+  `note` VARCHAR(255),
+  `AccessoryID` INT NOT NULL,
+  `AccessoryReceiptNoteID` INT NOT NULL,
+  PRIMARY KEY(AccessoryReceiptNoteID, AccessoryID),
+  KEY `FKReceive424448` (`AccessoryID`),
+  KEY `FKReceive409811` (`AccessoryReceiptNoteID`),
+  CONSTRAINT `FKReceive409811` FOREIGN KEY (`AccessoryReceiptNoteID`) REFERENCES `accessoryreceiptnote` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `FKReceive424448` FOREIGN KEY (`AccessoryID`) REFERENCES `accessory` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblreceivedaccessory`
+-- Dumping data for table `receivedaccessory`
 --
 
-LOCK TABLES `tblreceivedaccessory` WRITE;
-/*!40000 ALTER TABLE `tblreceivedaccessory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblreceivedaccessory` ENABLE KEYS */;
+LOCK TABLES `receivedaccessory` WRITE;
+/*!40000 ALTER TABLE `receivedaccessory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `receivedaccessory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblschedule`
+-- Table structure for table `schedule`
 --
 
-DROP TABLE IF EXISTS `tblschedule`;
+DROP TABLE IF EXISTS `schedule`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblschedule` (
-  `ID` int NOT NULL,
-  `customerName` varchar(255) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(255) NOT NULL,
+CREATE TABLE `schedule` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `customerName` VARCHAR(255) NOT NULL,
+  `phone` VARCHAR(25) NOT NULL,
+  `email` VARCHAR(255),
   `scheduleDay` date NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
-  `status` varchar(20) NOT NULL,
-  `tblEmployeeID` int NOT NULL,
-  `tblCustomerID` int NOT NULL,
+  `note` VARCHAR(255),
+  `status` VARCHAR(25) NOT NULL,
+  `EmployeeID` INT,
+  -- `CustomerID` INT,
+  PRIMARY KEY (`ID`),
+  KEY `FKSchedul624963` (`EmployeeID`),
+  -- KEY `FKSchedul831874` (`CustomerID`),
+  CONSTRAINT `FKSchedul624963` FOREIGN KEY (`EmployeeID`) REFERENCES `employee` (`ID`) ON DELETE SET NULL
+  -- CONSTRAINT `FKSchedul831874` FOREIGN KEY (`CustomerID`) REFERENCES `customer` (`ID`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schedule`
+--
+
+LOCK TABLES `schedule` WRITE;
+/*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
+/*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `service`
+--
+
+DROP TABLE IF EXISTS `service`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `service` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  `price` DECIMAL(17,2) NOT NULL,
+  `status` VARCHAR(25) NOT NULL,
+  `description` VARCHAR(255),
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblschedule`
+-- Dumping data for table `service`
 --
 
-LOCK TABLES `tblschedule` WRITE;
-/*!40000 ALTER TABLE `tblschedule` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblschedule` ENABLE KEYS */;
+LOCK TABLES `service` WRITE;
+/*!40000 ALTER TABLE `service` DISABLE KEYS */;
+/*!40000 ALTER TABLE `service` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblservice`
+-- Table structure for table `technicianassignment`
 --
 
-DROP TABLE IF EXISTS `tblservice`;
+DROP TABLE IF EXISTS `technicianassignment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblservice` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `price` decimal(17,2) NOT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+CREATE TABLE `technicianassignment` (
+  `EmployeeID` INT NOT NULL,
+  `BillID` INT NOT NULL,
+  KEY `FKTechnic438284` (`EmployeeID`),
+  KEY `FKTechnic866956` (`BillID`),
+  CONSTRAINT `FKTechnic438284` FOREIGN KEY (`EmployeeID`) REFERENCES `employee` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `FKTechnic866956` FOREIGN KEY (`BillID`) REFERENCES `bill` (`ID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblservice`
+-- Dumping data for table `technicianassignment`
 --
 
-LOCK TABLES `tblservice` WRITE;
-/*!40000 ALTER TABLE `tblservice` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblservice` ENABLE KEYS */;
+LOCK TABLES `technicianassignment` WRITE;
+/*!40000 ALTER TABLE `technicianassignment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `technicianassignment` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tbltechnicianassignment`
+-- Table structure for table `usedaccessory`
 --
 
-DROP TABLE IF EXISTS `tbltechnicianassignment`;
+DROP TABLE IF EXISTS `usedaccessory`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbltechnicianassignment` (
-  `tblEmployeeID` int NOT NULL,
-  `tblBillID` int NOT NULL
+CREATE TABLE `usedaccessory` (
+  `amount` INT NOT NULL,
+  `price` DECIMAL(17,2) NOT NULL,
+  `note` VARCHAR(255),
+  `BillID` INT NOT NULL,
+  `AccessoryID` INT NOT NULL,
+  PRIMARY KEY(BillID, AccessoryID),
+  KEY `FKUsedAcc254481` (`BillID`),
+  KEY `FKUsedAcc949143` (`AccessoryID`),
+  CONSTRAINT `FKUsedAcc254481` FOREIGN KEY (`BillID`) REFERENCES `bill` (`ID`) ON DELETE CASCADE,
+  CONSTRAINT `FKUsedAcc949143` FOREIGN KEY (`AccessoryID`) REFERENCES `accessory` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbltechnicianassignment`
+-- Dumping data for table `usedaccessory`
 --
 
-LOCK TABLES `tbltechnicianassignment` WRITE;
-/*!40000 ALTER TABLE `tbltechnicianassignment` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbltechnicianassignment` ENABLE KEYS */;
+LOCK TABLES `usedaccessory` WRITE;
+/*!40000 ALTER TABLE `usedaccessory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usedaccessory` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tblusedaccessory`
+-- Table structure for table `usedservice`
 --
 
-DROP TABLE IF EXISTS `tblusedaccessory`;
+DROP TABLE IF EXISTS `usedservice`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblusedaccessory` (
-  `amount` int NOT NULL,
-  `price` decimal(17,2) NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
-  `tblBillID` int NOT NULL,
-  `tblAccessoryID` int NOT NULL
+CREATE TABLE `usedservice` (
+  `amount` INT NOT NULL,
+  `price` DECIMAL(17,2) NOT NULL,
+  `note` VARCHAR(255),
+  `BillID` INT NOT NULL,
+  `ServiceID` INT NOT NULL,
+  PRIMARY KEY(BillID, ServiceID),
+  KEY `FKUsedSer780828` (`BillID`),
+  KEY `FKUsedSer198188` (`ServiceID`),
+  CONSTRAINT `FKUsedSer198188` FOREIGN KEY (`ServiceID`) REFERENCES `service` (`ID`),
+  CONSTRAINT `FKUsedSer780828` FOREIGN KEY (`BillID`) REFERENCES `bill` (`ID`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tblusedaccessory`
+-- Dumping data for table `usedservice`
 --
 
-LOCK TABLES `tblusedaccessory` WRITE;
-/*!40000 ALTER TABLE `tblusedaccessory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblusedaccessory` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tblusedservice`
---
-
-DROP TABLE IF EXISTS `tblusedservice`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tblusedservice` (
-  `amount` int NOT NULL,
-  `price` decimal(17,2) NOT NULL,
-  `note` varchar(255) DEFAULT NULL,
-  `tblBillID` int NOT NULL,
-  `tblServiceID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tblusedservice`
---
-
-LOCK TABLES `tblusedservice` WRITE;
-/*!40000 ALTER TABLE `tblusedservice` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tblusedservice` ENABLE KEYS */;
+LOCK TABLES `usedservice` WRITE;
+/*!40000 ALTER TABLE `usedservice` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usedservice` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -405,4 +445,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-02 22:14:24
+-- Dump completed on 2522-01-05 23:30:00
