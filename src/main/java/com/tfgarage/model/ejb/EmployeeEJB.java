@@ -1,11 +1,12 @@
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.local.EmployeeEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.EmployeeEJBRemote;
 import com.tfgarage.model.entity.Employee;
-import com.tfgarage.model.ejb.interfaces.EmployeeEJBInterface;
 
 import java.util.ArrayList;
 
-public class EmployeeEJB implements EmployeeEJBInterface {
+public class EmployeeEJB implements EmployeeEJBLocal, EmployeeEJBRemote {
 
     @Override
     public ArrayList<Employee> getAll() {

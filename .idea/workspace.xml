@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d33d875-b456-4c38-99a5-f48ea8fa0b37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tfgarage_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tfgarage_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_platform_jakarta_jakartaee_web_api_9_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GarageDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/GarageDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Document.ra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GarageManagementSystem.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GarageManagementSystem.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccessoryEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccessoryEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccessoryReceiptNoteEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccessoryReceiptNoteEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccessoryStatEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccountEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/AccountEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/BillEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/BillEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/CarEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/CarEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/CustomerEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/CustomerEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/CustomerStatEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/EmployeeEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/EmployeeEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ProviderEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ProviderEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ProviderStatEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ReceivedAccessoryEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ScheduleEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ScheduleEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ServiceEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ServiceEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/ServiceStatEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/TechnicianAssignmentEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/UsedAccessoryEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/UsedServiceEJB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/AccessoryEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/AccessoryEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/AccessoryReceiptNoteEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/AccessoryReceiptNoteEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/AccessoryStatEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/AccountEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/AccountEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/BillEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/BillEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/CarEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/CarEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/CustomerEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/CustomerEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/CustomerStatEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/EmployeeEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/EmployeeEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/ProviderEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/ProviderEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/ProviderStatEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/ReceivedAccessoryEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/ScheduleEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/ScheduleEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/ServiceEJBInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/local/ServiceEJBLocal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/ServiceStatEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/TechnicianAssignmentEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/UsedAccessoryEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/ejb/interfaces/UsedServiceEJBInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Accessory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Accessory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/AccessoryReceiptNote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/AccessoryReceiptNote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/ReceivedAccessoryKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/ReceivedAccessoryKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/UsedAccessoryKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/UsedAccessoryKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/UsedServiceKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/UsedServiceKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/utils/AccountStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/utils/EmployeeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tfgarage/model/entity/utils/EmployeeStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/BillTracking.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/CustomerBillDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Schedule.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ServicesAndAccessories.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrator/AccountDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrator/AddAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrator/AdministratorHome.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrator/EditAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrator/ManageAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/invalid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/AddEmployee.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/AddServiceAndAccessory.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/CustomerByRevenue.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/EditEmployee.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/EditServiceAndAccessory.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/EmployeeDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/ManageEmployee.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/ManageServiceAndAccessory.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/ManagerHome.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/ProviderByReceivedAccessories.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/ServiceAndAccessoryByRevenue.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/ServiceAndAccessoryDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manager/Statistic.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/AddCustomer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/AddSchedule.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/BillDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/CustomerDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/EditBill.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/EditCustomer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/EditSchedule.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/ManageBill.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/ManageCustomer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/ManageSchedule.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/NewScheduleDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/ReceiveCar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/ReviewNewSchedule.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/SaleHome.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/sale/ScheduleDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/AddProvider.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/AddReceiptNote.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/EditProvider.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/ManageProvider.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/ProviderDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/ReceiptNoteDetail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/ReceiveAccessory.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/warehouseman/WarehousemanHome.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tfgarage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tfgarage.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bf4f4f0e-edb5-4426-b9c3-b7a0e48b7fa1" />
+        <option name="url" value="git@github.com:Iamtinyfish/Garage-Management.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="wkf2fypk" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="26dN3jgubq0733c4eGZXSThYfFF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SpringBoot/deposits-management" />
+    <property name="settings.editor.selected.configurable" value="language.rust.rustfmt" />
+  </component>
+  <component name="RunManager" selected="Shell Script.Redeploy">
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="adminPort" value="8005" />
+      <option name="contextPath" value="/tfgarage" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/10.0.12" />
+          <option name="number" value="0" />
+          <option name="path" value="E:\Program Files\Apache Software Foundation\Tomcat 10.0" />
+          <option name="version" value="10.0.12.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Shell Script.Deploy" />
+      <item itemvalue="Shell Script.Stop Glassfish server" />
+      <item itemvalue="Shell Script.Start Glassfish server" />
+      <item itemvalue="Shell Script.Redeploy" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d33d875-b456-4c38-99a5-f48ea8fa0b37" name="Changes" comment="" />
+      <created>1647749312056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647749312056</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

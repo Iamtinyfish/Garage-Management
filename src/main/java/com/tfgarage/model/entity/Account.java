@@ -1,37 +1,33 @@
 package com.tfgarage.model.entity;
 
-import com.tfgarage.model.entity.utils.AccountStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name = "account")
 @Getter
 @Setter
+@ToString
 public class Account {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "ID", nullable = false ,unique = true)
 	private int id;
 
+	@NaturalId
 	@Column(name = "username", nullable = false, unique = true)
 	private String username;
 
 	@Column(name = "password", length = 32, nullable = false)
 	private String password;
 
-	@Column(name = "salt", length = 8, nullable = false)
-	private String salt;
+	@Column(name = "role", length = 25, nullable = false)
+	private String role;
 
-	@Column(name = "position", length = 25, nullable = false)
-	private String position;
-
-	@Column(name = "status", length = 25, nullable = false)
-	@Enumerated(EnumType.STRING)
-	private AccountStatus status;
-
-	@OneToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "EmployeeID")
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "EmployeeID")
 	private Employee employee;
 }

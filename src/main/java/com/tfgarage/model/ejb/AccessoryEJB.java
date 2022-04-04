@@ -1,12 +1,13 @@
 package com.tfgarage.model.ejb;
 
-import com.tfgarage.model.ejb.interfaces.AccessoryEJBInterface;
+import com.tfgarage.model.ejb.interfaces.local.AccessoryEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.AccessoryEJBRemote;
 import jakarta.ejb.Stateless;
 import com.tfgarage.model.entity.Accessory;
 import java.util.ArrayList;
 
 @Stateless
-public class AccessoryEJB implements AccessoryEJBInterface {
+public class AccessoryEJB implements AccessoryEJBLocal, AccessoryEJBRemote {
 
     @Override
     public ArrayList<Accessory> getAll() {

@@ -5,14 +5,15 @@
  */
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.local.CustomerEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.CustomerEJBRemote;
 import com.tfgarage.model.entity.Customer;
-import com.tfgarage.model.ejb.interfaces.CustomerEJBInterface;
 import jakarta.ejb.Stateless;
 
 import java.util.ArrayList;
 
 @Stateless
-public class CustomerEJB implements CustomerEJBInterface {
+public class CustomerEJB implements CustomerEJBLocal, CustomerEJBRemote {
     @Override
     public ArrayList<Customer> getAll() {
         //TODO getAll customer method

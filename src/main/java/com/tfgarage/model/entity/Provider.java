@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "provider")
@@ -20,9 +20,6 @@ public class Provider {
 	@Column(name = "name", nullable = false)
 	private String name;
 
-	@Transient
-	private int age;
-
 	@Column(name = "address", nullable = false)
 	private String address;
 
@@ -37,7 +34,7 @@ public class Provider {
 	private String note;
 
 	@OneToMany(mappedBy = "provider")
-	private List<AccessoryReceiptNote> accessoryReceiptNotes;
+	private Set<AccessoryReceiptNote> accessoryReceiptNotes;
 
 	@Transient
 	private int amountReceived;

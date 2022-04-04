@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Past;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.Set;
 
 
 @Entity
@@ -55,7 +55,7 @@ public class Customer {
 	private String note;
 
 	@OneToMany(mappedBy = "customer")
-	private ArrayList<Car> cars;
+	private Set<Car> cars;
 
 	@Transient
 	private float totalRevenue;

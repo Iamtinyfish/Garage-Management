@@ -1,10 +1,14 @@
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.local.ProviderEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.ProviderEJBRemote;
 import com.tfgarage.model.entity.Provider;
+import jakarta.ejb.Stateless;
+
 import java.util.ArrayList;
 
 @Stateless
-public class ProviderEJB implements ProviderEJBInterface{
+public class ProviderEJB implements ProviderEJBLocal, ProviderEJBRemote {
 
     @Override
     public ArrayList<Provider> getAll() {
@@ -13,7 +17,7 @@ public class ProviderEJB implements ProviderEJBInterface{
     }
 
     @Override
-    public Provider get() {
+    public Provider get(int providerID) {
         //TODO get provider method
         return new Provider();
     }

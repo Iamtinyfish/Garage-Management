@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "bill")
@@ -20,10 +20,10 @@ public class Bill {
 	private int id;
 
 	@OneToMany(mappedBy = "bill", fetch = FetchType.EAGER)
-	private List<UsedService> usedServices;
+	private Set<UsedService> usedServices;
 
 	@OneToMany(mappedBy = "bill", fetch = FetchType.EAGER)
-	private List<UsedAccessory> usedAccessories;
+	private Set<UsedAccessory> usedAccessories;
 
 	@Column(name = "totalPrice", nullable = false)
 	private float totalPrice;
@@ -54,7 +54,7 @@ public class Bill {
 		joinColumns = @JoinColumn(name = "BillID"),
 		inverseJoinColumns = @JoinColumn(name = "EmployeeID")
 	)
-	private List<Employee> technicians;
+	private Set<Employee> technicians;
 
 	@ManyToOne
 	@JoinColumn(name = "CarID")

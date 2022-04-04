@@ -1,13 +1,14 @@
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.remote.CarEJBRemote;
 import com.tfgarage.model.entity.Car;
-import com.tfgarage.model.ejb.interfaces.CarEJBInterface;
+import com.tfgarage.model.ejb.interfaces.local.CarEJBLocal;
 import jakarta.ejb.Stateless;
 
 import java.util.ArrayList;
 
 @Stateless
-public class CarEJB implements CarEJBInterface {
+public class CarEJB implements CarEJBLocal, CarEJBRemote {
     
     @Override
     public ArrayList<Car> getAll() {

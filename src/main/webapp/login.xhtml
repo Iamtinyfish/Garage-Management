@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title>Login Page</title>
+    <h:outputStylesheet library="assets" name="css/bootstrap.min.css"/>
+</h:head>
+<h:body>
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h:form id="loginForm" style="width:350px;margin-top:150px" styleClass="mx-auto p-4">
+        <h:panelGroup layout="block">
+            <h2>LOGIN</h2>
+            <h:outputLabel for="inUsername" styleClass="form-label">Username</h:outputLabel><br/>
+            <h:inputText id="inUsername" value="#{loginController.username}" styleClass="form-control"/>
+            <h:message for="inUsername" styleClass="text-danger" style="white-space: pre;"/><br/>
+
+            <h:outputLabel for="inPassword" styleClass="form-label">Password</h:outputLabel><br/>
+            <h:inputSecret id="inPassword" value="#{loginController.password}" styleClass="form-control"/>
+            <h:message for="inPassword" styleClass="text-danger" style="white-space: pre;"/><br/>
+
+            <h:message for="loginForm" styleClass="text-danger" style="white-space: pre;"/>
+
+            <h:selectBooleanCheckbox styleClass="py-1" value="#{loginController.rememberMe}"/> Remember Me
+
+            <h:commandButton styleClass="btn btn-primary float-end" update="@form" action="#{loginController.execute()}" value="Login" ajax="false"/><br/>
+
+            <h:commandLink action="reset-password?faces-redirect=true" value="Forgot Password?" styleClass="mx-auto mt-3"/>
+        </h:panelGroup>
+    </h:form>
+
+
+    <h:outputScript library="assets" name="js/bootstrap.bundle.min.js"/>
+</h:body>
+</html>

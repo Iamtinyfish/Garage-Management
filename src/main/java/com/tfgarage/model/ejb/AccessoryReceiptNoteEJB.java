@@ -1,13 +1,15 @@
 package com.tfgarage.model.ejb;
 
-import com.tfgarage.model.ejb.interfaces.AccessoryReceiptNoteEJBInterface;
+import com.tfgarage.model.ejb.interfaces.local.AccessoryReceiptNoteEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.AccessoryReceiptNoteEJBRemote;
 import com.tfgarage.model.entity.AccessoryReceiptNote;
 import jakarta.ejb.Stateless;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 @Stateless
-public class AccessoryReceiptNoteEJB implements AccessoryReceiptNoteEJBInterface {
+public class AccessoryReceiptNoteEJB implements AccessoryReceiptNoteEJBLocal, AccessoryReceiptNoteEJBRemote {
     @Override
     public ArrayList<AccessoryReceiptNote> getAll() {
         //TODO getAll accessoryReceiptNote method
@@ -45,9 +47,9 @@ public class AccessoryReceiptNoteEJB implements AccessoryReceiptNoteEJBInterface
     }
 
     @Override
-    public ArrayList<AccessoryReceiptNote> getListByAccessory(int accessoryID, Date from, Date to) {
+    public ArrayList<AccessoryReceiptNote> getListByAccessory(int accessoryID, LocalDate from, LocalDate to) {
         //TODO getAll AccessoryReceiptNote method
-        return new ArrayList<AccessoryReceiptNote>();
+        return null;
     }
 
     @Override

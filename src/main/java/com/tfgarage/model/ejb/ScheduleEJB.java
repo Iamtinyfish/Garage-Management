@@ -1,10 +1,12 @@
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.local.ScheduleEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.ScheduleEJBRemote;
 import com.tfgarage.model.entity.Schedule;
 
 import java.util.ArrayList;
 
-public class ScheduleEJB implements ScheduleEJBInterface{
+public class ScheduleEJB implements ScheduleEJBLocal, ScheduleEJBRemote {
     
     @Override
     public ArrayList<Schedule> getAll() {

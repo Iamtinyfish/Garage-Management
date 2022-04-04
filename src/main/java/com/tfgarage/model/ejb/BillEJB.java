@@ -1,14 +1,16 @@
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.local.BillEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.BillEJBRemote;
 import com.tfgarage.model.entity.Bill;
-import com.tfgarage.model.ejb.interfaces.BillEJBInterface;
 import jakarta.ejb.Stateless;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
 @Stateless
-public class BillEJB implements BillEJBInterface {
+public class BillEJB implements BillEJBLocal, BillEJBRemote {
     @Override
     public ArrayList<Bill> getAll() {
         //TODO getAll bill method
@@ -52,22 +54,23 @@ public class BillEJB implements BillEJBInterface {
     }
 
     @Override
-    public ArrayList<Bill> getListByAccessory(int accessoryID, Date from, Date to) {
-        //TODO getAll bill method
-        return new ArrayList<Bill>();
+    public ArrayList<Bill> getListByAccessory(int accessoryID, LocalDate from, LocalDate to) {
+        //TODO get list by accessory method
+        return null;
     }
 
     @Override
-    public ArrayList<Bill> getListByCustomer(int customerID, Date from, Date to) {
-        //TODO getAll bill method
-        return new ArrayList<Bill>();
+    public ArrayList<Bill> getListByCustomer(int customerID, LocalDate from, LocalDate to) {
+        //TODO get list by customer method
+        return null;
     }
 
     @Override
-    public ArrayList<Bill> getListByService(int serviceID, Date from, Date to) {
-        //TODO getAll bill method
-        return new ArrayList<Bill>();
+    public ArrayList<Bill> getListByService(int serviceID, LocalDate from, LocalDate to) {
+        //TODO get list by service method
+        return null;
     }
+
 
     @Override
     public ArrayList<Bill> getListByAccessory(int accessoryID) {

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "car")
@@ -36,5 +36,5 @@ public class Car {
 	private Customer customer;
 
 	@OneToMany(mappedBy = "car")
-	private List<Bill> bills;
+	private Set<Bill> bills;
 }

@@ -1,11 +1,12 @@
 package com.tfgarage.model.ejb;
 
+import com.tfgarage.model.ejb.interfaces.local.ServiceEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.ServiceEJBRemote;
 import com.tfgarage.model.entity.Service;
-import com.tfgarage.model.ejb.interfaces.ServiceEJBInterface;
 
 import java.util.ArrayList;
 
-public class ServiceEJB implements ServiceEJBInterface {
+public class ServiceEJB implements ServiceEJBLocal, ServiceEJBRemote {
 
     @Override
     public ArrayList<Service> getAll() {

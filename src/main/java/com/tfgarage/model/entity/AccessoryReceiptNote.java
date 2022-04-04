@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "accessoryreceiptnote")
@@ -20,7 +20,7 @@ public class AccessoryReceiptNote {
 	private int id;
 
 	@OneToMany(mappedBy = "accessoryReceiptNote", fetch = FetchType.EAGER)
-	private List<ReceivedAccessory> receivedAccessories;
+	private Set<ReceivedAccessory> receivedAccessories;
 
 	@Column(name = "totalCost", nullable = false)
 	private float totalCost;

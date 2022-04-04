@@ -1,5 +1,6 @@
 package com.tfgarage.model.entity;
 
+import com.tfgarage.model.entity.utils.ScheduleStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.Getter;
@@ -31,7 +32,8 @@ public class Schedule {
 	private LocalDate scheduleDay;
 
 	@Column(name = "status", nullable = false, length = 25)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	private ScheduleStatus status;
 
 	@Column(name = "note")
 	private String note;

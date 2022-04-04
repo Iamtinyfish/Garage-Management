@@ -1,24 +1,20 @@
 package com.tfgarage.model.ejb;
 
-import com.tfgarage.model.ejb.interfaces.AccountEJBInterface;
+import com.tfgarage.model.ejb.interfaces.local.AccountEJBLocal;
+import com.tfgarage.model.ejb.interfaces.remote.AccountEJBRemote;
 import com.tfgarage.model.entity.Account;
 import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
+import org.hibernate.Session;
 
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
-import java.security.spec.KeySpec;
 import java.util.ArrayList;
-import java.util.Base64;
 
-@Stateless
-public class AccountEJB implements AccountEJBInterface {
-
-    @Override
-    public boolean checkLogin(String username, String password) {
-        return true;
-    }
+@Stateless(mappedName = "com/tfgarage/model/ejb/AccountEJB.java")
+public class AccountEJB implements AccountEJBLocal, AccountEJBRemote {
+    @PersistenceContext
+    private EntityManager em;
 
     @Override
     public ArrayList<Account> getAll() {
@@ -27,9 +23,10 @@ public class AccountEJB implements AccountEJBInterface {
     }
 
     @Override
-    public Account get(int accountID) {
-        //TODO get 1 account method
-        return new Account();
+    public Account get(String username) {
+        return em.unwrap(Session.class)
+                .bySimpleNaturalId(Account.class)
+                .load(username);
     }
 
     @Override
@@ -39,8 +36,10 @@ public class AccountEJB implements AccountEJBInterface {
     }
 
     @Override
+    @Transactional
     public boolean add(Account account) {
-        //TODO add 1 account method
+        em.persist(account);
+        em.flush();
         return true;
     }
 
@@ -54,20 +53,5 @@ public class AccountEJB implements AccountEJBInterface {
     public boolean delete(int accountID) {
         //TODO delete 1 account method
         return true;
-    }
-
-    private String hash(String password, String salt) {
-        Base64.Encoder enc = Base64.getEncoder();
-        Base64.Decoder dec = Base64.getDecoder();
-        KeySpec spec = new PBEKeySpec(password.toCharArray(), dec.decode(salt), 65536, 128);
-        SecretKeyFactory f;
-        byte[] hash = new byte[0];
-        try {
-            f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
-            hash = f.generateSecret(spec).getEncoded();
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
-            e.printStackTrace();
-        }
-        return enc.encodeToString(hash);
     }
 }

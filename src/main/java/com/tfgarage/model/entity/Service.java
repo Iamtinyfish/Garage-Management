@@ -1,11 +1,12 @@
 package com.tfgarage.model.entity;
 
 
+import com.tfgarage.model.entity.utils.ServiceStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "service")
@@ -27,10 +28,11 @@ public class Service {
 	private float price;
 
 	@Column(name = "status", length = 25)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	private ServiceStatus status;
 
 	@OneToMany(mappedBy = "service")
-	private List<UsedService> usedServices;
+	private Set<UsedService> usedServices;
 
 	@Transient
 	private float totalRevenue;
